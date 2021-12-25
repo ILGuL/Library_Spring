@@ -1,6 +1,10 @@
-package com.ilgul.library;
+package com.ilgul.library.service;
 
 import com.github.dockerjava.api.exception.ConflictException;
+import com.ilgul.library.dto.ClientDto;
+import com.ilgul.library.exception.NotFoundException;
+import com.ilgul.library.entity.Client;
+import com.ilgul.library.repository.ClientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

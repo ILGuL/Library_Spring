@@ -1,5 +1,6 @@
-package com.ilgul.library;
+package com.ilgul.library.repository;
 
+import com.ilgul.library.entity.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;

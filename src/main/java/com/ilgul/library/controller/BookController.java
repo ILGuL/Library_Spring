@@ -1,5 +1,8 @@
-package com.ilgul.library;
+package com.ilgul.library.controller;
 
+import com.ilgul.library.dto.BookDto;
+import com.ilgul.library.entity.Book;
+import com.ilgul.library.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

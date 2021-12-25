@@ -1,4 +1,4 @@
-package com.ilgul.library;
+package com.ilgul.library.dto;
 
 import lombok.Data;
 

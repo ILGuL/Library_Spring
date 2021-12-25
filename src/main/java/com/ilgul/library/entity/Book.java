@@ -1,5 +1,6 @@
-package com.ilgul.library;
+package com.ilgul.library.entity;
 
+import com.ilgul.library.dto.BookDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
