@@ -3,11 +3,11 @@ package com.ilgul.library.entity;
 import com.ilgul.library.dto.ClientDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -22,6 +22,10 @@ public class Client {
     private String lastName;
     private String email;
     private String phone;
+
+    @OneToMany(mappedBy = "client")
+    @ToString.Exclude
+    private List<BookInUse> bookInUses = new ArrayList<>();
 
     public Client(ClientDto dto){
         firstName = dto.getFirstName();
