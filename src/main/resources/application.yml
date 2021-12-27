@@ -4,6 +4,10 @@ spring:
     username: dev-user
     password: dev-password
 
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+
 time:
   expired:
     after: 14

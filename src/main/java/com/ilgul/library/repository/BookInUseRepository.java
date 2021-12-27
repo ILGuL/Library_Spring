@@ -3,6 +3,7 @@ package com.ilgul.library.repository;
 import com.ilgul.library.entity.Book;
 import com.ilgul.library.entity.BookInUse;
 import com.ilgul.library.entity.Client;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.time.LocalDate;
@@ -13,5 +14,6 @@ public interface BookInUseRepository extends PagingAndSortingRepository<BookInUs
 
     Optional<BookInUse> findByClientAndBook(Client client, Book book);
 
+    @EntityGraph(attributePaths = {"client", "book"})
     List<BookInUse> findByInUseFromBefore(LocalDate inUseFromBefore);
 }
